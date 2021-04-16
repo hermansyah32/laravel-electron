@@ -1,0 +1,19 @@
+{
+  "name": "laravel-electron",
+  "version": "1.0.0",
+  "description": "laravel electron tutorial",
+  "main": "main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hermansyah32/laravel-electron.git"
+  },
+  "author": "Hermansyah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hermansyah32/laravel-electron/issues"
+  },
+  "homepage": "https://github.com/hermansyah32/laravel-electron#readme"
+}
