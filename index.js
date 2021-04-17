@@ -1,6 +1,7 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain, dialog } = require("electron");
 const path = require("path");
 const PHPServer = require("./node-php-server").default;
+require("./main/menu");
 
 app.on("ready", () => {
   createWindow();
@@ -36,6 +37,11 @@ function createWindow() {
   mainWindow.on("closed", function () {
     phpServer.close();
     mainWindow = null;
+  });
+
+  ipcMain.handle("fromRenderer", (event, data) => {
+    dialog.showMessageBox(null, { message: data.message });
+    return { message: "Hello back from Main" };
   });
 }
 
