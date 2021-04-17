@@ -1,6 +1,6 @@
 import phpServer from "node-php-server";
 import * as path from "path";
-import * as isDev from "electron-is-dev";
+import isDev from "electron-is-dev";
 
 export default class PHPServer {
   constructor(host = "localhost", port = 80) {
