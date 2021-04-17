@@ -19,11 +19,11 @@ export default class PHPServer {
       ? `${__dirname}/php/php.exe`
       : `${path.dirname(process.resourcesPath)}/resources/php/php.exe`;
     const basepath = isDev
-      ? `${__dirname}/app/public`
-      : `${path.dirname(process.resourcesPath)}/resources/app/public`;
+      ? `${__dirname}/laravel/public`
+      : `${path.dirname(process.resourcesPath)}/resources/laravel/public`;
     const routerpath = isDev
-      ? `${__dirname}/app/server.php`
-      : `${path.dirname(process.resourcesPath)}/resources/app/server.php`;
+      ? `${__dirname}/laravel/server.php`
+      : `${path.dirname(process.resourcesPath)}/resources/laravel/server.php`;
 
     this.appServer.createServer({
       port: this.port,

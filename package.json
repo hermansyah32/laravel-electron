@@ -23,5 +23,22 @@
   "dependencies": {
     "electron-is-dev": "^2.0.0",
     "node-php-server": "^0.1.2"
+  },
+  "build": {
+    "appId": "dev.hermansyah.laravel-electron",
+    "copyright": "Copyright Hermansyah",
+    "extraResources": [
+      "laravel",
+      "php"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "zip"
+    },
+    "linux": {
+      "category": "Utility"
+    }
   }
 }
