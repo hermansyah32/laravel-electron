@@ -8,8 +8,7 @@ app.on("ready", () => {
 
 let phpServer = new PHPServer();
 
-let mainWindow,
-  childWindow = null;
+let mainWindow = null;
 
 function createWindow() {
   phpServer.createServer();
@@ -37,24 +36,6 @@ function createWindow() {
   mainWindow.on("closed", function () {
     phpServer.close();
     mainWindow = null;
-  });
-
-  mainWindow.webContents.on("new-window", (event, url) => {
-    event.preventDefault();
-    childWindow = new BrowserWindow({
-      width: 1000,
-      height: 800,
-      show: false,
-      webPreferences: {
-        preload: path.join(__dirname, "./preload.js"),
-        nodeIntegration: false,
-        enableRemoteModule: false,
-      },
-      parent: mainWindow,
-    });
-
-    childWindow.loadURL(url);
-    childWindow.show();
   });
 }
 
