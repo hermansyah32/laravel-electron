@@ -4,7 +4,8 @@
   "description": "laravel electron tutorial",
   "main": "main/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "watch": "nodemon --exec electron ."
   },
   "repository": {
     "type": "git",
