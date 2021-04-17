@@ -13,6 +13,6 @@ process.once("loaded", () => {
   });
 
   ipcRenderer.on("console", (event, response) => {
-    console.log(`resposne`, resposne);
+    alert(response.message)
   });
 });
